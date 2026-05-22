@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LNU Campus Map - Leyte Normal University</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="header-left">
+            <img src="school_logo.jpg" alt="LNU Seal" class="modal-logo-img" onerror="this.src='school_logo.png'">
+            <div>
+                <h1>LNU CAMPUS MAP</h1>
+                <p>Leyte Normal University</p>
+            </div>
+        </div>
+        <nav class="header-nav">
+            <a href="#" class="active"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="#" id="nav-about-trigger"><i class="fa-solid fa-circle-info"></i> About</a>
+            <a href="#" id="nav-contact-trigger"><i class="fa-solid fa-envelope"></i> Contact</a>
+        </nav>
+    </header>
+
+    <div class="app-workspace">
+        
+        <aside class="panel side-panel left-sidebar" id="left-sidebar">
+            <div class="sidebar-mobile-header">
+                <h3>Navigation Menu</h3>
+                <button id="sidebar-close-btn" class="sidebar-close-trigger"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <section class="panel-section">
+                <h2>SEARCH LOCATION</h2>
+                <div class="search-container">
+                    <input type="text" id="map-search" placeholder="Search building or place...">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <button id="clear-search-btn" class="hidden"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div id="search-results" class="results-list"></div>
+            </section>
+
+            <section class="panel-section">
+                <h2>LAYERS</h2>
+                <div id="layer-toggles" class="toggle-container"></div>
+            </section>
+
+            <section class="panel-section">
+                <h2>LEGEND</h2>
+                <p class="section-instruction-text">Select a campus waypoint to locate on map:</p>
+                <div id="map-legend" class="legend-container"></div>
+            </section>
+        </aside>
+
+        <main class="center-map-container">
+            <div id="map"></div>
+            <button id="mobile-drawer-trigger" class="mobile-fab-toggle" aria-label="Open Map Navigation Menu">
+                <i class="fa-solid fa-bars"></i> <span>Menu</span>
+            </button>
+        </main>
+
+        <aside class="panel side-panel right-sidebar" id="right-info-sidebar">
+            <div id="sidebar-placeholder" class="sidebar-empty-placeholder">
+                <i class="fa-solid fa-map-location-dot placeholder-vector-icon"></i>
+                <h3>WAYPOINT INSPECTOR</h3>
+                <p>Click on any campus waypoint, search result, or legend location to explore detailed descriptions, structural imagery, and geographic parameters here.</p>
+            </div>
+            
+            <div id="sidebar-detail-content" class="hidden">
+                </div>
+        </aside>
+
+    </div>
+
+    <div class="sub-copyright-bar">
+        <span>Leyte Normal University | LNU Campus Mapping System</span>
+        <span>&copy; 2026 All Rights Reserved.</span>
+    </div>
+
+    <div id="about-info-modal" class="app-modal-overlay hidden">
+        <div class="modal-card-window animate-modal">
+            <div class="modal-card-header">
+                <div class="header-branding-group">
+                    <img src="school_logo.jpg" alt="LNU Seal" class="modal-logo-img" onerror="this.src='school_logo.png'">
+                    <div>
+                        <h3>About the LNU Campus</h3>
+                        <p>Leyte Normal University</p>
+                    </div>
+                </div>
+                <button id="about-modal-close" class="modal-close-x">&times;</button>
+            </div>
+            <div class="modal-card-body">
+                <p>Leyte Normal University (LNU) is a premier public institution committed to excellence in teacher education, arts, and sciences in the Philippines.</p>
+                <p>Leyte Normal University is a university in the province of Leyte, Philippines. It is mandated to provide higher professional and special instruction for special purposes and to promote research and extension services, advanced studies, and progressive leadership in education and other related fields.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact-info-modal" class="app-modal-overlay hidden">
+        <div class="modal-card-window animate-modal">
+            <div class="modal-card-header">
+                <div class="header-branding-group">
+                    <i class="fa-solid fa-address-book modal-header-icon"></i>
+                    <div>
+                        <h3>Campus Contact Channels</h3>
+                        <p>Get in Touch with Administration</p>
+                    </div>
+                </div>
+                <button id="contact-modal-close" class="modal-close-x">&times;</button>
+            </div>
+            <div class="modal-card-body">
+                <ul class="modal-contact-channels">
+                    <li>
+                        <i class="fa-solid fa-location-dot icon-box"></i>
+                        <div>
+                            <strong>Main Mailing Address</strong>
+                            <span>Paterno St., Tacloban City, Leyte, Philippines, 6500</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-link icon-box"></i>
+                        <div>
+                            <strong>Official Web Hub</strong>
+                            <a href="https://lnu.edu.ph" target="_blank" rel="noopener">lnu.edu.ph</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone icon-box"></i>
+                        <div>
+                            <strong>Administrative Telephone</strong>
+                            <span>(053) 321-2176 / 321-5612</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope icon-box"></i>
+                        <div>
+                            <strong>Electronic Correspondence Mailing</strong>
+                            <a href="mailto:info@lnu.edu.ph">info@lnu.edu.ph</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="image-lightbox-modal" class="lightbox-modal hidden">
+        <button id="lightbox-close-btn" class="lightbox-close" aria-label="Close expanded view">&times;</button>
+        <div class="lightbox-content-wrapper">
+            <img id="lightbox-target-img" src="" alt="Expanded landmark footprint">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

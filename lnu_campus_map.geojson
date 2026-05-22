@@ -1,0 +1,34 @@
+{
+"type": "FeatureCollection",
+"name": "lnu_campus_map",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"xy_coordinate_resolution": 1e-05,
+"features": [
+{ "type": "Feature", "properties": { "name": "Brillo Hall", "elevation": 72.59009, "comment": null, "description": null, "source": null, "url": null, "url name": null, "time": "2026-04-16T05:14:26Z" }, "geometry": { "type": "Point", "coordinates": [ 125.00159, 11.23754 ] } },
+{ "type": "Feature", "properties": { "name": "Admin", "elevation": 55.612, "comment": null, "description": null, "source": null, "url": null, "url name": null, "time": "2026-04-16T05:20:44Z" }, "geometry": { "type": "Point", "coordinates": [ 125.00145, 11.23784 ] } },
+{ "type": "Feature", "properties": { "name": "Monument ", "elevation": 65.57074, "comment": null, "description": null, "source": null, "url": null, "url name": null, "time": "2026-04-16T05:22:04Z" }, "geometry": { "type": "Point", "coordinates": [ 125.0015, 11.2382 ] } },
+{ "type": "Feature", "properties": { "name": "Obdulla R. Cinco Building", "elevation": 0.0, "comment": null, "description": null, "source": null, "url": null, "url name": "Digitized in QGIS", "time": null }, "geometry": { "type": "Point", "coordinates": [ 125.00209, 11.23823 ] } },
+{ "type": "Feature", "properties": { "name": "Student Center", "elevation": 0.0, "comment": null, "description": null, "source": null, "url": null, "url name": "Digitized in QGIS", "time": null }, "geometry": { "type": "Point", "coordinates": [ 125.0017, 11.23741 ] } },
+{ "type": "Feature", "properties": { "name": "LNU Undergrad Library", "elevation": 0.0, "comment": null, "description": null, "source": null, "url": null, "url name": "Digitized in QGIS", "time": null }, "geometry": { "type": "Point", "coordinates": [ 125.00073, 11.23845 ] } },
+{ "type": "Feature", "properties": { "name": "LNU House", "elevation": 0.0, "comment": null, "description": null, "source": null, "url": null, "url name": "Digitized in QGIS", "time": null }, "geometry": { "type": "Point", "coordinates": [ 125.00132, 11.23872 ] } },
+{ "type": "Feature", "properties": { "name": "Hotel Crescencia", "elevation": 0.0, "comment": null, "description": null, "source": null, "url": null, "url name": "Digitized in QGIS", "time": null }, "geometry": { "type": "Point", "coordinates": [ 125.00003, 11.23539 ] } },
+{ "type": "Feature", "properties": { "name": "Conversion Building", "elevation": 0.0, "comment": null, "description": null, "source": null, "url": null, "url name": "Digitized in QGIS", "time": null }, "geometry": { "type": "Point", "coordinates": [ 125.00038, 11.23569 ] } },
+{ "type": "Feature", "properties": { "name": "LNU Dormitory", "elevation": 0.0, "comment": null, "description": null, "source": null, "url": null, "url name": "Digitized in QGIS", "time": null }, "geometry": { "type": "Point", "coordinates": [ 124.99994, 11.23612 ] } },
+{ "type": "Feature", "properties": { "name": "Integrated Laboratory School", "elevation": 0.0, "comment": null, "description": null, "source": null, "url": null, "url name": "Digitized in QGIS", "time": null }, "geometry": { "type": "Point", "coordinates": [ 125.00053, 11.23597 ] } },
+{ "type": "Feature", "properties": { "name": "ACAD Building", "elevation": null, "comment": null, "description": null, "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 124.99955, 11.23569 ] } },
+{ "type": "Feature", "properties": { "name": "College of Management and Entrepreneurship Building", "elevation": null, "comment": null, "description": null, "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 125.00007, 11.23575 ] } },
+{ "type": "Feature", "properties": { "name": "YoungField Canteen", "elevation": null, "comment": null, "description": null, "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 125.00017, 11.23598 ] } },
+{ "type": "Feature", "properties": { "name": "LNU Gym", "elevation": null, "comment": null, "description": null, "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 125.00204, 11.23675 ] } },
+{ "type": "Feature", "properties": { "name": "Humanities Building", "elevation": null, "comment": null, "description": null, "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 125.00231, 11.23716 ] } },
+{ "type": "Feature", "properties": { "name": "Center for Teaching Excellence Building", "elevation": null, "comment": null, "description": null, "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 125.00216, 11.23741 ] } },
+{ "type": "Feature", "properties": { "name": "Alba Hall", "elevation": null, "comment": null, "description": null, "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 125.00201, 11.23721 ] } },
+{ "type": "Feature", "properties": { "name": "HRDC Gymnasium", "elevation": null, "comment": null, "description": null, "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 125.00175, 11.2369 ] } },
+{ "type": "Feature", "properties": { "name": "Montejo Teacher Center Building", "elevation": null, "comment": null, "description": null, "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 125.00142, 11.23688 ] } },
+{ "type": "Feature", "properties": { "name": "IGP Trade Park", "elevation": null, "comment": null, "description": null, "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 125.00134, 11.23709 ] } },
+{ "type": "Feature", "properties": { "name": "Magdalena S. Ramo Building", "elevation": null, "comment": null, "description": null, "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 125.00118, 11.23842 ] } },
+{ "type": "Feature", "properties": { "name": "Purification M Flores Building", "elevation": null, "comment": null, "description": null, "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 125.00093, 11.23792 ] } },
+{ "type": "Feature", "properties": { "name": "Paterno Canteen", "elevation": null, "comment": null, "description": null, "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 125.00105, 11.23827 ] } },
+{ "type": "Feature", "properties": { "name": "LNU Cafeteria", "elevation": null, "comment": null, "description": null, "source": null, "url": null, "url name": null, "time": null }, "geometry": { "type": "Point", "coordinates": [ 125.00123, 11.23857 ] } }
+]
+}
+
